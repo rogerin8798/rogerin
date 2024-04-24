@@ -1,0 +1,21 @@
+-- Set the robot color (if possible)
+SET_ROBOT_COLOR(PINK)
+
+-- Define functions for movement (replace with your robot's commands)
+FORWARD(speed)
+BACKWARD(speed)
+TURN_LEFT(angle)
+TURN_RIGHT(angle)
+
+-- Define a function to simulate shooting (replace with light or sound)
+SHOOT()
+
+-- Main loop 
+LOOP {
+  -- Add your robot control here
+  -- Example:
+  FORWARD(50)  
+  TURN_LEFT(90)
+  SHOOT()
+  BACKWARD(30)
+}
