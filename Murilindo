@@ -1,6 +1,6 @@
 import robocode.*;
 
-public class Mumuh extends Robot {
+public class Murilindo extends Robot {
     
     public void run() {
         // Definir as cores do robô
