@@ -1,0 +1,33 @@
+import robocode.*;
+
+public class Mumuh extends Robot {
+    
+    public void run() {
+        // Definir as cores do robô
+        setBodyColor(java.awt.Color.blue);
+        setGunColor(java.awt.Color.black);
+        setRadarColor(java.awt.Color.red);
+        setBulletColor(java.awt.Color.green);
+        setScanColor(java.awt.Color.yellow);
+        
+        // Loop principal do robô
+        while (true) {
+            ahead(100); // Move para frente 100 pixels
+            turnGunRight(360); // Gira o canhão em círculo
+            back(100); // Move para trás 100 pixels
+            turnGunRight(360); // Gira o canhão em círculo
+        }
+    }
+    
+    public void onScannedRobot(ScannedRobotEvent e) {
+        fire(1); // Atira com potência 1 quando um robô é detectado
+    }
+    
+    public void onHitByBullet(HitByBulletEvent e) {
+        turnLeft(90); // Gira para a esquerda quando atingido por uma bala
+    }
+    
+    public void onHitWall(HitWallEvent e) {
+        turnLeft(180); // Gira para a esquerda quando atinge a parede
+    }
+}
